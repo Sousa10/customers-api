@@ -1,5 +1,5 @@
 # Customer data api
-A node js api to manage customer data
+A node js api to manage customer data using express.js
 
 To test the endpoints you can use POSTMAN - https://learning.postman.com/docs/getting-started/introduction/#testing-apis
 
