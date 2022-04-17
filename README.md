@@ -12,5 +12,8 @@ http://localhost:5000/api/customer/id where id should be an integer
 Create a customer
 http://localhost:5000/api/customer whith POST method and passing a customer object to the body
 
-Update and delete customer
-http://localhost:5000/api/customer/id using DELETE method and passing integer as the id
+Update customer
+http://localhost:5000/api/customer/id using PATCH method, passing id as a paramater and sending the the data to update to the body
+
+Delete customer
+http://localhost:5000/api/customer/id using DELETE method and passing id as a paramater
