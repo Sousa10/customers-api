@@ -34,6 +34,12 @@ describe('Customers API', () => {
                 )
             })
     })
+    test('GET /customers --> Return no customers', () => {
+        return request(app)
+            .get('/api/customers/')
+            .expect('Content-Type', 'text/html; charset=utf-8')
+            .expect(404)
+    })
 
     it('GET /customers/id --> specific customer by ID', () => {
         return request(app)
@@ -56,7 +62,7 @@ describe('Customers API', () => {
             })
     })
 
-    it('GET /customers/id --> 404 if not found', () => {
+    it('GET /customers/id --> 404 if specific customer not found', () => {
         return request(app)
             .get('/api/customer/9999')
             .expect('Content-Type', 'application/json; charset=utf-8')
@@ -87,8 +93,9 @@ describe('Customers API', () => {
     })
 
     it('PUT /customers/id --> update customer', async () => {
-        return request(app)
-            .patch('/api/customer/1')
+        console.log(newCustomer.response);
+        return await request(app)
+            .patch(`/api/customer/1`)
             .send({ name: "Lorem2" })
             .expect(200)
             .then((response) => {

@@ -17,3 +17,8 @@ http://localhost:5000/api/customer/id using PATCH method, passing id as a parama
 
 Delete customer
 http://localhost:5000/api/customer/id using DELETE method and passing id as a paramater
+
+Tests
+Jest (https://jestjs.io/) was used for unit tests
+
+To run the test cases please run command npm test

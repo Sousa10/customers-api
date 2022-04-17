@@ -8,7 +8,7 @@ const {
     updateCustomer,
     deleteCustomer} = require('../controllers/customers')
 
-router.route('/').get(getCustomers).post(createCustomer)
-router.route('/:id').get(getCustomer).patch(updateCustomer).delete(deleteCustomer)
-
+    router.route('/').get(getCustomers).post(createCustomer)
+    router.route('/:id').get(getCustomer).patch(updateCustomer).delete(deleteCustomer)
+    
 module.exports = router
